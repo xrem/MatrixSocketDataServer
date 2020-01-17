@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
@@ -25,7 +26,7 @@ namespace MatrixSocketDataServer
             };
 
             while (Program._running) {
-                //
+                Thread.Sleep(100);
             }
 
             Logger.Debug("Shutting down server...");
